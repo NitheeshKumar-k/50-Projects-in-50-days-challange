@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --left-bg-color: rgba(86, 84, 234, 0.7);
+  --right-bg-color: rgba(58, 58, 75, 0.8);
+  --left-btn-color: rgba(86, 84, 234, 1);
+  --right-btn-color: rgba(58, 58, 75, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+
+.container .left {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: url("ps.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container .left::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-bg-color);
+}
+
+.container .right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: url("xbox.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container .right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-bg-color);
+}
+
+.container h1 {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+.container .btn {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  color: #fff;
+  border: #fff solid 0.2rem;
+  width: 8rem;
+  height: 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .left .btn:hover {
+  border-color: var(--left-btn-color);
+  background-color: var(--left-btn-color);
+}
+
+.container .right .btn:hover {
+  border-color: var(--right-btn-color);
+  background-color: var(--right-btn-color);
+}
+
+.hover-left .left {
+  width: 75%;
+}
+
+.hover-left .right {
+  width: 25%;
+}
+
+.hover-right .right {
+  width: 75%;
+}
+
+.hover-right .left {
+  width: 25%;
+}
+
+.container .left,
+.container.left::before,
+.container .right,
+.container.right::before {
+  transition: all 1s ease-in-out;
+}
