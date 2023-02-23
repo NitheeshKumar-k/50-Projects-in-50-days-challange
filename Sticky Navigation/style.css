@@ -13,6 +13,7 @@ body {
 
 .container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero {
@@ -49,4 +50,50 @@ body {
 .hero p {
   letter-spacing: 1px;
   font-size: 20px;
+}
+
+.content h2, .content h3 {
+  margin: 10px 0;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.nav {
+  background-color: #222;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav.active {
+  background-color: #fff;
+  padding: 10px 0;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .container a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav.active .container a {
+  color: #222;
+}
+
+.nav .container ul {
+  display: flex;
+  list-style-type: none;
 }
